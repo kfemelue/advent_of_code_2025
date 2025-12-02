@@ -13,12 +13,12 @@ for i in range(0, len(moves)):
             decoded += 1
             current = 0
         elif current - number_of_clicks  < 0:
-            current = 99 + (current - number_of_clicks) - 1
+            current = (current - number_of_clicks) + 100
     if direction == "R":
         if current + number_of_clicks  == 100:
             decoded += 1
             current = 0
         elif current + number_of_clicks  >  99:
-            current = 0 + ( (current+number_of_clicks) - 100  )
+            current = (current + number_of_clicks) - 100
 
 print(decoded)
